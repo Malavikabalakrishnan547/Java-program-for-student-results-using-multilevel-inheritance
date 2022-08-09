@@ -1,0 +1,73 @@
+class multilevelinherSemres {
+
+    void sem1res() {
+        System.out.println("First semester results");
+        System.out.println("eng :100");
+        System.out.println("mal :90");
+        System.out.println("ec: 80");
+    }
+}
+
+class sem2 extends multilevelinherSemres {
+
+    void sem2res() {
+        System.out.println("Second semester results: ");
+        System.out.println("eng :100");
+        System.out.println("mat :75");
+        System.out.println("dc: 85");
+    }
+}
+
+class sem3 extends sem2 {
+
+    void sem3res() {
+
+        System.out.println("Third semester results: ");
+
+        System.out.println("cs :96");
+        System.out.println("of :84");
+        System.out.println("Analog: 81");
+    }
+}
+
+class sem4 extends sem3 {
+
+    void sem4res() {
+        System.out.println("fourth semester results: ");
+        System.out.println("dc :96");
+        System.out.println("mc :86");
+        System.out.println("mp: 91");
+    }
+
+}
+
+class inheritance {
+
+    public static void main(String args[]) {
+        sem4 obj = new sem4();
+        obj.sem1res();
+        obj.sem2res();
+        obj.sem3res();
+        obj.sem4res();
+
+    }
+}
+
+
+\\OUTPUT OF THE ABOVE CODE
+First semester results
+eng :100
+mal :90
+ec: 80
+Second semester results: 
+eng :100
+mat :75
+dc: 85
+Third semester results: 
+cs :96
+of :84
+Analog: 81
+fourth semester results: 
+dc :96
+mc :86
+mp: 91
